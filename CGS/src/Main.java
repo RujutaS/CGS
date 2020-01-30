@@ -11,7 +11,10 @@ public class Main {
 	private JFrame window;
 	private JPanel cardPanel;
 	private Menu menu; 
+	private StorePanel store;
 	private GamePanel gameView;
+	private StorePanel storeView;
+	private ScoreboardPanel scoreboardView;
 	private PSurfaceAWT.SmoothCanvas processingCanvas;
 	
 
@@ -24,6 +27,14 @@ public class Main {
 
 			gameView = new GamePanel();
 			PApplet.runSketch(new String[]{""}, gameView);
+			storeView = new StorePanel(this);
+	
+			//scoreboardView = new ScoreboardPanel();
+			
+			
+			
+			//window.getContentPane().add(new JPanel());
+			
 
 			PSurfaceAWT surf = (PSurfaceAWT) gameView.getSurface();
 			processingCanvas = (PSurfaceAWT.SmoothCanvas) surf.getNative();
@@ -49,6 +60,7 @@ public class Main {
 
 			cardPanel.add(menu,"1");
 			cardPanel.add(processingCanvas,"2");
+			
 
 			window.setLayout(new BorderLayout());
 			window.pack();
@@ -57,7 +69,7 @@ public class Main {
 		}
 		catch (IllegalStateException e)
 		{
-			System.out.println("There has been an error with the processing library. Please rerun the program. Thank you!");
+			System.out.println("processing library error -- rerun");
 		}
 
 	}
@@ -76,34 +88,39 @@ public class Main {
 		processingCanvas.requestFocus();	
 
 		
-		String message = "cgs";
-		JOptionPane.showMessageDialog(null, message, "cgs", JOptionPane.INFORMATION_MESSAGE);
+		//String message = "cgs";
+		//JOptionPane.showMessageDialog(null, message, "cgs", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public void store() 
 	{
-		gameView.printGame();
+		
+		
+		storeView.printStore(this);
 
 		((CardLayout)cardPanel.getLayout()).next(cardPanel);
 		processingCanvas.requestFocus();	
 
 		
-		String message = "cgs";
-		JOptionPane.showMessageDialog(null, message, "cgs", JOptionPane.INFORMATION_MESSAGE);
+		//String message = "cgs";
+		//JOptionPane.showMessageDialog(null, message, "cgs", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
 	public void scoreboard() 
 	{
-		gameView.printGame();
+		
+		scoreboardView.printScoreboard();
 
 		((CardLayout)cardPanel.getLayout()).next(cardPanel);
-		processingCanvas.requestFocus();	
-
+		processingCanvas.requestFocus();
 		
-		String message = "cgs";
-		JOptionPane.showMessageDialog(null, message, "cgs", JOptionPane.INFORMATION_MESSAGE);
+		//String message = "cgs";
+		//JOptionPane.showMessageDialog(null, message, "cgs", JOptionPane.INFORMATION_MESSAGE);
 	}
 	
+	public Menu getMenu() {
+		return menu;
+	}
 	
 
 }

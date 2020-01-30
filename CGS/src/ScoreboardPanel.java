@@ -5,14 +5,15 @@ import javax.swing.JPanel;
 import processing.core.PApplet;
 
 
-public class GamePanel extends PApplet{
+public class ScoreboardPanel extends PApplet{
 	
 	
 	private final float DRAWING_WIDTH = 1000, DRAWING_HEIGHT = 500;
-	private int coins;
 	
-	public void printGame() {
-		System.out.println("game panel");
+	public void printScoreboard() {
+		System.out.println("scoreboard panel");
+		
+		
 	}
 	
 	public void draw()
@@ -30,9 +31,5 @@ public class GamePanel extends PApplet{
 		//flightSim.draw(this);
 		popStyle();
 		popMatrix();
-	}
-	
-	public int getCoins() {
-		return coins;
 	}
 }

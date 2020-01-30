@@ -13,7 +13,7 @@ public class Menu extends JPanel implements ActionListener, ItemListener
 	
 	Main w;
 	
-	private JButton start, quit, store, scoreboard;
+	private JButton start, quit, store, scoreboard, help;
 	
 	public Menu(Main w)
 	{
@@ -25,6 +25,7 @@ public class Menu extends JPanel implements ActionListener, ItemListener
 		quit = new JButton("quit");
 		store = new JButton("store");
 		scoreboard = new JButton("scoreboard");
+		help = new JButton("help");
 		
 		JLabel gameName = new JLabel("CGS");
 		gameName.setFont(new Font("Serif", Font.PLAIN, 40));
@@ -35,12 +36,15 @@ public class Menu extends JPanel implements ActionListener, ItemListener
 		quit.addActionListener(this);
 		store.addActionListener(this);
 		scoreboard.addActionListener(this);
+		help.addActionListener(this);
 		
 		this.add(gameName);
 		this.add(start);
 		this.add(store);
 		this.add(scoreboard);
+		this.add(help);
 		this.add(quit);
+		
 		
 	}
 
@@ -56,31 +60,19 @@ public class Menu extends JPanel implements ActionListener, ItemListener
 			w.store();
 		} else if (e.getSource().equals(scoreboard)) {
 			w.scoreboard();
+		} else if (e.getSource().equals(help)) {
+			displayInstructions();
 		}
 		
-		
-		/*
-		else if (e.getSource().equals(startButton))
-		{
-			source = sourceBox.getItemAt(sourceBox.getSelectedIndex()) + "";
-			destination = destinationBox.getItemAt(destinationBox.getSelectedIndex()) + "";
-			int index = source.indexOf("(");
-			source = source.substring(index+1, source.length()-1);
-			int index2 = destination.indexOf("(");
-			destination = destination.substring(index2+1, destination.length()-1);
-			
-			if (!source.equals(destination))
-			{
-				w.changePanel(source, destination);
-			}
-			else
-			{
-				displaySameBoxCheckedMessage();
-			}
-			*/
+	
 		}
 
 
+	
+	private void displayInstructions() {
+		String message = "add instructions";
+		JOptionPane.showMessageDialog(null, message, "instructions", JOptionPane.PLAIN_MESSAGE);
+	}
 	
 	public void itemStateChanged(ItemEvent e) {
 		
