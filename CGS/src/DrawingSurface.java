@@ -32,6 +32,8 @@ public class DrawingSurface extends PApplet implements ScreenSwitcher {
 		screens.add(screen3);
 		StoreScreen screen4 = new StoreScreen(this);
 		screens.add(screen4);
+		ScoreboardScreen screen5 = new ScoreboardScreen(this);
+		screens.add(screen5);
 		
 		activeScreen = screens.get(0);
 		
