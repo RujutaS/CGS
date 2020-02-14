@@ -1,82 +1,80 @@
-import java.awt.*;
-
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.event.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 
-public class Menu extends JPanel implements ActionListener, ItemListener
-{
+
+
+import java.awt.Point;
+import java.awt.Rectangle;
+
+
+public class Menu extends Screen {
+
+	private DrawingSurface surface;
 	
-	Main w;
+	//private Rectangle button;
+	private Rectangle play, store, help;
 	
-	private JButton start, quit, store, scoreboard, help;
+
+	public Menu(DrawingSurface surface) {
+		super(800,600);
+		this.surface = surface;
+
+		//button = new Rectangle(800/2-100,600/2-50,200,100);
+		store = new Rectangle (225, 300, 60, 60);
+		play = new Rectangle (375, 300, 60, 60);
+		help = new Rectangle (525, 300, 60, 60);
 	
-	public Menu(Main w)
-	{
-		this.w = w;
-		
-		JPanel buttonPanel = new JPanel();
-		
-		start = new JButton("start");
-		quit = new JButton("quit");
-		store = new JButton("store");
-		scoreboard = new JButton("scoreboard");
-		help = new JButton("help");
-		
-		JLabel gameName = new JLabel("CGS");
-		gameName.setFont(new Font("Serif", Font.PLAIN, 40));
-		
-		//this.add(buttonPanel);
-		
-		start.addActionListener(this);
-		quit.addActionListener(this);
-		store.addActionListener(this);
-		scoreboard.addActionListener(this);
-		help.addActionListener(this);
-		
-		this.add(gameName);
-		this.add(start);
-		this.add(store);
-		this.add(scoreboard);
-		this.add(help);
-		this.add(quit);
-		
-		
 	}
 
+
+	public void draw() {
+
+		surface.pushStyle();
+		
+		surface.background(255,255,255);
+		
+		surface.rect(play.x, play.y, play.width, play.height, 10, 10, 10, 10);
+		surface.rect(store.x, store.y, store.width, store.height, 10, 10, 10, 10); //the shape of the shape
+		surface.rect(help.x, help.y, help.width, help.height, 10, 10, 10, 10); //the shape of the shape
 	
-	public void actionPerformed(ActionEvent e)
-	{
-		if (e.getSource().equals(start)) 
-		{
-			w.startGame();
-		} else if (e.getSource().equals(quit)) {
-			System.exit(0);
-		} else if (e.getSource().equals(store)) {
-			w.store();
-		} else if (e.getSource().equals(scoreboard)) {
-			w.scoreboard();
-		} else if (e.getSource().equals(help)) {
-			displayInstructions();
+		surface.textSize(14);
+		
+		surface.fill(0);
+		String pText = "PLAY";
+		String hText = "HELP";
+		String sText = "STORE";
+		
+		float p = surface.textWidth(pText);
+		float h = surface.textWidth(hText);
+		float s = surface.textWidth(sText);
+		
+		surface.text(pText, play.x+play.width/2 - 14, play.y+play.height/2);
+		surface.text(hText, help.x+help.width/2 - 14, help.y+help.height/2);
+		surface.text(sText, store.x+store.width/2 - 16, store.y+store.height/2);
+	
+		
+		surface.textSize(50);
+		
+		surface.text("CGS", 350, 260);
+		
+		surface.popStyle();
+	}
+
+
+
+	
+	public void mousePressed() {
+		Point p = surface.actualCoordinatesToAssumed(new Point(surface.mouseX,surface.mouseY));
+		if (play.contains(p)) {
+			surface.switchScreen(ScreenSwitcher.GAMESCREEN);
 		}
-		
-	
+		if (help.contains(p)) {
+			surface.switchScreen(ScreenSwitcher.HELPSCREEN);
 		}
-
-
-	
-	private void displayInstructions() {
-		String message = "add instructions";
-		JOptionPane.showMessageDialog(null, message, "instructions", JOptionPane.PLAIN_MESSAGE);
+		if (store.contains(p)) {
+			surface.switchScreen(ScreenSwitcher.STORESCREEN);
+		}
 	}
 	
-	public void itemStateChanged(ItemEvent e) {
-		
-		
-	}
-	
+
 }
+
