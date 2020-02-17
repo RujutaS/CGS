@@ -44,7 +44,18 @@ public class StoreScreen extends Screen {
 				surface.fill(0);
 				surface.text("BACK", 18, 35);
 				surface.text("QUIT", 78, 35);
+				surface.text("complete more levels to earn more coins", 550, 55);
+				
+				surface.textSize(20);
+				surface.text("my coins: ", 550, 35);
+				
+				
 
+				
+				surface.textSize(50);
+				surface.text("STORE", 325, 100);
+				
+				
 
 				surface.popStyle();
 

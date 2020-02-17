@@ -44,6 +44,8 @@ public class ScoreboardScreen extends Screen {
 				surface.text("BACK", 18, 35);
 				surface.text("QUIT", 78, 35);
 
+				surface.textSize(50);
+				surface.text("SCOREBOARD", 230, 130);
 
 				surface.popStyle();
 

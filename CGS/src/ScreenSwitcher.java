@@ -7,5 +7,6 @@ public interface ScreenSwitcher {
 	public static final int STORESCREEN = 3;
 	public static final int SCOREBOARDSCREEN = 4;
 	
+	
 	public void switchScreen(int i);
 }

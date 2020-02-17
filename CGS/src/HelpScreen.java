@@ -44,6 +44,9 @@ public class HelpScreen extends Screen {
 				surface.text("BACK", 18, 35);
 				surface.text("QUIT", 78, 35);
 
+				surface.textSize(50);
+				surface.text("HOW TO PLAY!", 230, 100);
+				
 
 				surface.popStyle();
 
