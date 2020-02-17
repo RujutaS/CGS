@@ -1,0 +1,54 @@
+package samarthshah.surface;
+import java.awt.Color;
+
+import processing.core.PApplet;
+import processing.core.PImage;
+import samarthshah.objects.World;
+
+
+public class DrawingSurface extends PApplet {
+	
+	World world;
+	boolean[] keys;
+
+	public DrawingSurface() {
+		keys = new boolean[1];
+	}
+	
+	public void setup() {
+		
+		PImage playerImage = this.loadImage("jerry.jpg");
+
+		Color c1 = new Color(0, 255, 255);
+		Color c2 = new Color(255, 255, 255);
+
+		
+		world = new World(this, this, c1, c2, playerImage, 1, 4);
+	}
+	
+	public void draw() {	
+		if (keys[0]) {
+			world.jump();
+		}
+		world.draw(this);
+		keys[0] = false;
+	}
+	
+	
+	public void keyPressed() {
+		if (keyCode == UP) {
+			keys[0] = true;
+		} else if (key == 'r') {
+			world.resetPlayer();
+		}  else if (keyCode == this.ENTER) {
+			world.pause();
+		}
+	}
+	
+	public void mouseClicked() {
+		world.mouseClicked(mouseX, mouseY);
+	}
+	
+	
+}
+
