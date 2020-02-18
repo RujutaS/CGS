@@ -13,7 +13,7 @@ public class ScoreboardScreen extends Screen {
 	private Rectangle quit, back;
 	
 	public ScoreboardScreen(DrawingSurface surface) {
-		super(800,600);
+		super(800, 600);
 		this.surface = surface;
 		
 		x = 30;
@@ -49,22 +49,7 @@ public class ScoreboardScreen extends Screen {
 
 				surface.popStyle();
 
-				
-				
-				// Change stuff
-
-				if (surface.isPressed(KeyEvent.VK_LEFT))
-					x -= 5;
-				if (surface.isPressed(KeyEvent.VK_RIGHT))
-					x += 5;
-				if (surface.isPressed(KeyEvent.VK_UP))
-					y -= 5;
-				if (surface.isPressed(KeyEvent.VK_DOWN))
-					y += 5;
-
-
-				
-				
+	
 				
 			}
 			

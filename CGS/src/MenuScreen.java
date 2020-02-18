@@ -6,7 +6,7 @@ import java.awt.Point;
 import java.awt.Rectangle;
 
 
-public class Menu extends Screen {
+public class MenuScreen extends Screen {
 
 	private DrawingSurface surface;
 	
@@ -14,8 +14,8 @@ public class Menu extends Screen {
 	private Rectangle play, store, help, quit, scoreboard;
 	
 
-	public Menu(DrawingSurface surface) {
-		super(800,600);
+	public MenuScreen(DrawingSurface surface) {
+		super(800, 600);
 		this.surface = surface;
 
 		//button = new Rectangle(800/2-100,600/2-50,200,100);
