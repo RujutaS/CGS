@@ -3,18 +3,32 @@ package samarthshah.obstacles;
 import processing.core.PApplet;
 import samarthshah.shapes.Triangle;
 
+/** A class representing a spike as an obstacle that would cause the player to die instantly
+ *  
+ * @author Samarth Shah
+ *
+ */
 public class Spike extends Obstacle {
 	
-	PApplet p;
-	Triangle tri;
-	boolean up;
+	private Triangle tri;
+	private boolean up;
 	
-	public Spike(int x, int y, int l, boolean up, PApplet p) {
-		this.p = p;
+	/** Creates a new spike with the given parameters
+	 * 
+	 * @param x An int with the x value of the spike
+	 * @param y An int with the y value of the spike
+	 * @param l An int with the length of the sides of the spike
+	 * @param up If the spike is facing upward
+	 */
+	public Spike(int x, int y, int l, boolean up) {
 		tri = new Triangle(x, y, l, up);
 		this.up = up;
 	}
 
+	/**
+	 * 
+	 * @return The bounds of the spike in terms of the x and y values of its points
+	 */
 	public float[] getBoundsPoints() {
 		float[] bounds = new float[7];
 		
@@ -35,6 +49,10 @@ public class Spike extends Obstacle {
 		return bounds;
 	}
 	
+	/**
+	 * 
+	 * @return A array of floats with the physical values used to do calculations with the position and size
+	 */
 	@Override
 	public float[] getBounds() {
 		float[] bounds = new float[4];
@@ -52,6 +70,10 @@ public class Spike extends Obstacle {
 		return bounds;
 	}
 
+	/** Draws the Spike
+	 * 
+	 * @param p The PApplet to draw onto
+	 */
 	@Override
 	public void draw(PApplet p) {
 		tri.draw(p);

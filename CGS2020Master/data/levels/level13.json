@@ -1,0 +1,12 @@
+{"obstacles":
+[
+{"type":"Background","path":"backgrounds/background.jpg"},
+{"type":"Platform","x":0,"y":400,"w":2100,"h":30},
+{"type":"Platform","x":400,"y":370,"w":300,"h":30},
+{"type":"Spike","x":510,"y":370,"l":30,"up":true},
+{"type":"Question","x":750,"y":30,"w":1200,"h":370,"c":1,"a":["What is 1","What is 2","What is 3"],"q":"What is 1 + 1?"}
+{"type":"Ending","x":2000,"y":30,"w":100,"h":370},
+], 
+"color1": [255, 255, 255], 
+"color2": [255,255,255]
+}

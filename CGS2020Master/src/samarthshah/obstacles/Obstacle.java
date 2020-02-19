@@ -1,27 +1,25 @@
 package samarthshah.obstacles;
 
 import processing.core.PApplet;
-import processing.core.PShape;
 import samarthshah.shapes.Shape;
 
+/** An abstract class used as the basis for all of the obstacles
+ * 
+ * @author Samarth Shah
+ *
+ */
 public abstract class Obstacle {
-//	protected PShape shape;
 	protected Shape shape;
-	
-//	public PShape getBounds() {
-//		return shape;
-//	}
-	
+
+	/**
+	 * 
+	 * @return A array of floats with the physical values used to do calculations with the position and size
+	 */
 	public abstract float[] getBounds();
 	
+	/** Draws the obstacles
+	 * 
+	 * @param p The PApplet to draw onto
+	 */
 	public abstract void draw(PApplet p);
-	
-	
-//	public void draw(PApplet p) {
-//		p.shape(shape);
-//	}
-//	
-//	public Shape getShape( ) {
-//		return shape;
-//	}
 }

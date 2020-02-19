@@ -1,5 +1,4 @@
 package samarthshah.surface;
-import java.awt.Color;
 
 import processing.core.PApplet;
 import processing.core.PImage;
@@ -19,11 +18,7 @@ public class DrawingSurface extends PApplet {
 		
 		PImage playerImage = this.loadImage("jerry.jpg");
 
-		Color c1 = new Color(0, 255, 255);
-		Color c2 = new Color(255, 255, 255);
-
-		
-		world = new World(this, this, c1, c2, playerImage, 1, 4);
+		world = new World(this, playerImage, 1, 3);
 	}
 	
 	public void draw() {	
@@ -40,7 +35,7 @@ public class DrawingSurface extends PApplet {
 			keys[0] = true;
 		} else if (key == 'r') {
 			world.resetPlayer();
-		}  else if (keyCode == this.ENTER) {
+		}  else if (key == 'p') {
 			world.pause();
 		}
 	}
