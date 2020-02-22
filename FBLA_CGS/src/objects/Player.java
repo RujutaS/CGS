@@ -105,7 +105,7 @@ public class Player extends Rectangle2D.Double {
 			Obstacle standingSurface = null;
 			for (Obstacle o : obstacles) {
 
-				if (o.getClass().getName().equals("samarthshah.obstacles.Platform")) {
+				if (o.getClass().getName().equals("obstacles.Platform")) {
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
 
@@ -114,7 +114,7 @@ public class Player extends Rectangle2D.Double {
 						standingSurface = o;
 						vy = 0;
 					}
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Spike")) {
+				} else if (o.getClass().getName().equals("obstacles.Spike")) {
 					float[] params = (o.getBounds());
 
 					if (params[3] == 1) {
@@ -138,7 +138,7 @@ public class Player extends Rectangle2D.Double {
 					}
 
 
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Question")) {
+				} else if (o.getClass().getName().equals("obstacles.Question")) {
 					Question q = (Question)o;
 
 					Platform[] dividers = q.getDividers();
@@ -178,7 +178,7 @@ public class Player extends Rectangle2D.Double {
 							}
 						}
 					}
-				}  else if (o.getClass().getName().equals("samarthshah.obstacles.Ending")) {
+				}  else if (o.getClass().getName().equals("obstacles.Ending")) {
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
 
@@ -195,7 +195,7 @@ public class Player extends Rectangle2D.Double {
 			Obstacle headSurface = null;
 			for (Obstacle o : obstacles) {
 
-				if (o.getClass().getName().equals("samarthshah.obstacles.Platform")) {
+				if (o.getClass().getName().equals("obstacles.Platform")) {
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
 
@@ -203,7 +203,7 @@ public class Player extends Rectangle2D.Double {
 						headSurface = o;
 						vy = 0;
 					}
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Spike")) {
+				} else if (o.getClass().getName().equals("obstacles.Spike")) {
 					float[] params = (o.getBounds());
 
 					if (params[3] == 1) {
@@ -227,7 +227,7 @@ public class Player extends Rectangle2D.Double {
 					}
 
 
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Question")) {
+				} else if (o.getClass().getName().equals("obstacles.Question")) {
 					Question q = (Question)o;
 
 					Platform[] dividers = q.getDividers();
@@ -267,7 +267,7 @@ public class Player extends Rectangle2D.Double {
 							}
 						}
 					}
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Ending")) {
+				} else if (o.getClass().getName().equals("obstacles.Ending")) {
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
 
@@ -294,7 +294,7 @@ public class Player extends Rectangle2D.Double {
 			Obstacle rightSurface = null;
 			for (Obstacle o : obstacles) {
 
-				if (o.getClass().getName().equals("samarthshah.obstacles.Platform")) {
+				if (o.getClass().getName().equals("obstacles.Platform")) {
 
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
@@ -302,7 +302,7 @@ public class Player extends Rectangle2D.Double {
 					if (rect.intersects(strechX)) {
 						rightSurface = o;
 					}
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Spike")) {
+				} else if (o.getClass().getName().equals("obstacles.Spike")) {
 					float[] params = (o.getBounds());
 
 					if (params[3] == 1) {
@@ -325,7 +325,7 @@ public class Player extends Rectangle2D.Double {
 						}
 					}
 
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Question")) {
+				} else if (o.getClass().getName().equals("obstacles.Question")) {
 					Question q = (Question)o;
 
 					Platform[] dividers = q.getDividers();
@@ -364,7 +364,7 @@ public class Player extends Rectangle2D.Double {
 							}
 						}
 					}
-				} else if (o.getClass().getName().equals("samarthshah.obstacles.Ending")) {
+				} else if (o.getClass().getName().equals("obstacles.Ending")) {
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
 
@@ -411,7 +411,7 @@ public class Player extends Rectangle2D.Double {
 			Obstacle standingSurface = null;
 			for (Platform o : platforms) {
 
-				if (o.getClass().getName().equals("samarthshah.obstacles.Platform")) {
+				if (o.getClass().getName().equals("obstacles.Platform")) {
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
 
@@ -433,7 +433,7 @@ public class Player extends Rectangle2D.Double {
 			
 			for (Platform o : platforms) {
 
-				if (o.getClass().getName().equals("samarthshah.obstacles.Platform")) {
+				if (o.getClass().getName().equals("obstacles.Platform")) {
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);
 
@@ -458,7 +458,7 @@ public class Player extends Rectangle2D.Double {
 			Obstacle rightSurface = null;
 			for (Platform o : platforms) {
 
-				if (o.getClass().getName().equals("samarthshah.obstacles.Platform")) {
+				if (o.getClass().getName().equals("obstacles.Platform")) {
 
 					float[] params = (o.getBounds());
 					Rectangle2D.Double rect = new Rectangle2D.Double(params[0], params[1], params[2], params[3]);

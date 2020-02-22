@@ -44,7 +44,8 @@ public class Answer {
 		p.pushStyle();
 		p.noFill();
 		p.rect(x, y, w, h);
-		p.text(answer, x+10, y+60);
+		p.textSize(20);
+		p.text(answer, x, y, w, h);
 		p.popStyle();
 	}
 	

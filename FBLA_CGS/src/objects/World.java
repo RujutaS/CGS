@@ -147,7 +147,7 @@ public class World {
 
 
 			for (Obstacle o : obstacles) {
-				if (o.getClass().getName().equals("samarthshah.obstacles.Question")) {
+				if (o.getClass().getName().equals("obstacles.Question")) {
 					Question questionObject = (Question)(o);
 					question = questionObject.getQuestion();
 					break;
@@ -341,7 +341,7 @@ public class World {
 		int i = 1;
 
 		for (Obstacle o : obstacles) {
-			if (o.getClass().getName().equals("samarthshah.obstacles.Question")) {
+			if (o.getClass().getName().equals("obstacles.Question")) {
 
 				if (i == questionNumber) {
 					Question questionObject = (Question)(o);

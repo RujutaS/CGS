@@ -1,9 +1,9 @@
 {
-  "coins": 4,
+  "coins": 24,
   "bought": [
     true,
     true,
-    false
+    true
   ],
-  "selected": 1
+  "selected": 2
 }

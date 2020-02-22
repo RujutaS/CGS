@@ -4,7 +4,6 @@ import java.awt.Color;
 
 import processing.core.PApplet;
 import utilities.GameScreen;
-import utilities.ImageLoader;
 
 /**
  * 

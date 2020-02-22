@@ -13,7 +13,7 @@
 
 {"type":"Spike","x":4120,"y":400,"l":30,"up":true},
 {"type":"Platform","x":4150,"y":370,"w":350,"h":30},
-{"type":"Question","x":4500,"y":60,"w":1500,"h":340,"c":2,"a":["â€œEducation is the first step in progressâ€�","â€œEducation should be accessible by everyoneâ€�","â€œI believe that education is the right of every personâ€�"],"q":" What is the first line of the FBLA-PBL creed?"},
+{"type":"Question","x":4500,"y":60,"w":1500,"h":340,"c":2,"a":["Education is the first step in progress","Education should be accessible by everyone","I believe that education is the right of every person"],"q":"What is the first line of the FBLA-PBL creed?"},
 
 {"type":"Spike","x":6070,"y":400,"l":30,"up":true},
 {"type":"Platform","x":6100,"y":370,"w":300,"h":30},

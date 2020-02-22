@@ -2,11 +2,9 @@ package utilities;
 
 import java.awt.Color;
 import java.awt.Rectangle;
-import java.util.HashSet;
 import menus.*;
 import objects.World;
 import processing.core.PApplet;
-import processing.data.JSONObject;
 
 /**
  * 
@@ -200,7 +198,7 @@ public class GameScreen extends PApplet {
 	
 	private void makeWorld() {
 		Store s = (Store) store;
-		world = new World(this, s.getSelectedImage(), lvlNum, diffNum);
+		world = new World(this, s.getSelectedImage(), diffNum, lvlNum);
 	}
 	
 	/**
