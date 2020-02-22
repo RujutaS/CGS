@@ -18,7 +18,7 @@ public class DrawingSurface extends PApplet {
 		
 		PImage playerImage = this.loadImage("jerry.jpg");
 
-		world = new World(this, playerImage, 1, 3);
+		world = new World(this, playerImage, 4, 3);
 	}
 	
 	public void draw() {	

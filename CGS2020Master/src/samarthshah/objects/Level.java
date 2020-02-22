@@ -57,6 +57,16 @@ public class Level {
 	public ArrayList<Obstacle> getObstacles() {
 		return onScreenObstacles;
 	}
+	
+
+	/**
+	 * 
+	 * @return The all obstacles that are in the level
+	 */
+	public ArrayList<Obstacle> getAllObstacles() {
+		return obstacles;
+	}
+
 
 	/** Refreshes what obstacles are currently on the screen
 	 * 

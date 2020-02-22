@@ -1,0 +1,36 @@
+{"obstacles":
+[
+{"type":"Background","path":"backgrounds/background.jpg"},
+{"type":"Platform","x":0,"y":400,"w":10100,"h":30},
+{"type":"Platform","x":0,"y":30,"w":10100,"h":10},
+
+{"type":"Spike","x":430,"y":400,"l":30,"up":true},
+{"type":"Spike","x":510,"y":400,"l":30,"up":true},
+{"type":"Question","x":600,"y":60,"w":1400,"h":340,"c":1,"a":["America","Organization","Future"],"q":"Which is NOT a level of BAA?"},
+
+{"type":"Platform","x":2050,"y":370,"w":300,"h":30},
+{"type":"Spike","x":2150,"y":370,"l":30,"up":true},
+{"type":"Question","x":2450,"y":60,"w":1550,"h":340,"c":0,"a":["Alexander T. Graham","Hamden L. Forker","Vivian Clarke"],"q":"The current CEO of FBLA is…"},
+
+{"type":"Platform","x":4050,"y":370,"w":150,"h":30},
+{"type":"Spike","x":4220,"y":400,"l":30,"up":true},
+{"type":"Platform","x":4280,"y":370,"w":120,"h":30},
+{"type":"Question","x":4500,"y":60,"w":1500,"h":340,"c":2,"a":["High schoolers","Middle schoolers","College students"],"q":"PBL is a program for…"},
+
+{"type":"Platform","x":6000,"y":370,"w":400,"h":30},
+{"type":"Platform","x":6200,"y":340,"w":200,"h":30},
+{"type":"Spike","x":6370,"y":340,"l":30,"up":true},
+{"type":"Question","x":6450,"y":60,"w":1550,"h":340,"c":2,"a":["Passion, goal making, and outreach","Employment, career, and volunteer work","Service, education, and progress"],"q":"BAA’s core activities and concepts are…"},
+
+{"type":"Spike","x":8070,"y":400,"l":30,"up":true},
+{"type":"Platform","x":8100,"y":370,"w":300,"h":30},
+{"type":"Spike","x":8200,"y":370,"l":30,"up":true},
+{"type":"Platform","x":8400,"y":340,"w":200,"h":30},
+{"type":"Question","x":8600,"y":60,"w":1400,"h":340,"c":2,"a":["3 letters of recommendation sent to the national FBLA president","To have placed in a competition at a regional conference","To be an active/registered member and approval from advisers"],"q":"Which is necessary in order to participate in the Business Achievement Awards?"},
+
+
+{"type":"Ending","x":10100,"y":30,"w":100,"h":370},
+], 
+"color1": [0, 255, 255], 
+"color2": [255,255,255]
+}

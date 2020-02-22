@@ -1,0 +1,36 @@
+{"obstacles":
+[
+{"type":"Background","path":"backgrounds/background.jpg"},
+{"type":"Platform","x":0,"y":400,"w":10100,"h":30},
+{"type":"Platform","x":0,"y":30,"w":10100,"h":10},
+
+{"type":"Spike","x":430,"y":400,"l":30,"up":true},
+{"type":"Spike","x":510,"y":400,"l":30,"up":true},
+{"type":"Question","x":600,"y":60,"w":1400,"h":340,"c":0,"a":["92","50","65"],"q":"For the education aspect of Future awards, participants must score at least a ____% on the FBLA knowledge Quiz"},
+
+{"type":"Platform","x":2050,"y":370,"w":300,"h":30},
+{"type":"Spike","x":2150,"y":370,"l":30,"up":true},
+{"type":"Question","x":2450,"y":60,"w":1550,"h":340,"c":1,"a":["Chris Kimbell","Hamden L. Forker","Dean Kamen"],"q":"____ is the founder of FBLA-PPL"},
+
+{"type":"Platform","x":4050,"y":370,"w":150,"h":30},
+{"type":"Spike","x":4220,"y":400,"l":30,"up":true},
+{"type":"Platform","x":4280,"y":370,"w":120,"h":30},
+{"type":"Question","x":4500,"y":60,"w":1500,"h":340,"c":0,"a":["At SLC","At NLC","At a regional conference"],"q":"When are accomplishers of the Leader award recognized?"},
+
+{"type":"Platform","x":6000,"y":370,"w":400,"h":30},
+{"type":"Platform","x":6200,"y":340,"w":200,"h":30},
+{"type":"Spike","x":6370,"y":340,"l":30,"up":true},
+{"type":"Question","x":6450,"y":60,"w":1550,"h":340,"c":2,"a":["San Antonio","Anaheim","Los Angeles"],"q":"Which of these cities has an FBLA NLC never been held?"},
+
+{"type":"Spike","x":8070,"y":400,"l":30,"up":true},
+{"type":"Platform","x":8100,"y":370,"w":300,"h":30},
+{"type":"Spike","x":8200,"y":370,"l":30,"up":true},
+{"type":"Platform","x":8400,"y":340,"w":200,"h":30},
+{"type":"Question","x":8600,"y":60,"w":1400,"h":340,"c":1,"a":["2008","1940","1900"],"q":"FBLA began in…"},
+
+
+{"type":"Ending","x":10100,"y":30,"w":100,"h":370},
+], 
+"color1": [0, 255, 255], 
+"color2": [255,255,255]
+}

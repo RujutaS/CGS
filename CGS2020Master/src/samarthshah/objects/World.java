@@ -48,6 +48,8 @@ public class World {
 	 * @param difficulty The difficulty that was selected by the player
 	 */
 	public World(PApplet applet, PImage playerImage, int levelNumber, int difficulty) {
+		
+		
 		p = applet;
 		if (difficulty == 1) {
 			speed = 3;
@@ -165,7 +167,11 @@ public class World {
 		button1 = new Rectangle2D.Double(p.width/2-x, PConstants.BOTTOM + 80, p.width/4, 70);
 		button2 = new Rectangle2D.Double(p.width/2-x, PConstants.BOTTOM + 190, p.width/4, 70);
 
-		p.text(question, p.width/2 - 200, 20);
+		p.pushStyle();
+		p.textSize(15);
+		p.textAlign(PConstants.CENTER, PConstants.BOTTOM);
+		p.text(question, p.width/2 , 25);
+		p.popStyle();
 		for (int i = 0; i < player.getLives(); i++) {
 			p.image(heart, p.width-100 + 30*i, 5, 20, 20);
 		}
@@ -259,6 +265,8 @@ public class World {
 	 */
 	public void resetWorld() {
 		x = 0;
+		questionNumber = 0;
+		this.nextQuestion();
 	}
 
 	/** Resets the player and the world to its original place
@@ -323,10 +331,11 @@ public class World {
 	/** Changes the question in the top bar to the next one
 	 * 
 	 */
-	public void nextQuestion() {		
+	public void nextQuestion() {	
+				
 		questionNumber++;
 
-		ArrayList<Obstacle> obstacles = level.getObstacles();
+		ArrayList<Obstacle> obstacles = level.getAllObstacles();
 
 		int i = 1;
 

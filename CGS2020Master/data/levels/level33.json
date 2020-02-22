@@ -1,0 +1,37 @@
+{"obstacles":
+[
+{"type":"Background","path":"backgrounds/background.jpg"},
+{"type":"Platform","x":0,"y":400,"w":10100,"h":30},
+{"type":"Platform","x":0,"y":30,"w":10100,"h":10},
+
+{"type":"Spike","x":430,"y":400,"l":30,"up":true},
+{"type":"Platform","x":500,"y":370,"w":100,"h":30},
+{"type":"Question","x":600,"y":60,"w":1400,"h":340,"c":2,"a":["2000","1980","1994"],"q":"In what year did middle level begin?"},
+
+{"type":"Platform","x":2000,"y":370,"w":200,"h":30},
+{"type":"Spike","x":2170,"y":370,"l":30,"up":true},
+{"type":"Platform","x":2300,"y":370,"w":200,"h":30},
+{"type":"Spike","x":2470,"y":370,"l":30,"up":true},
+{"type":"Question","x":2500,"y":60,"w":1500,"h":340,"c":0,"a":["False","True","I have no idea"],"q":"True or False? One does not have to be a registered member to participate in a state project."},
+
+{"type":"Platform","x":4100,"y":370,"w":400,"h":30},
+{"type":"Spike","x":4220,"y":370,"l":30,"up":true},
+{"type":"Platform","x":4350,"y":340,"w":150,"h":30},
+{"type":"Question","x":4500,"y":60,"w":1500,"h":340,"c":2,"a":["I have no idea","True","False"],"q":"Financial literacy only refers to one’s ability to file taxes. True or False?"},
+
+{"type":"Platform","x":6000,"y":370,"w":200,"h":30},
+{"type":"Spike","x":6200,"y":400,"l":30,"up":true},
+{"type":"Platform","x":6300,"y":370,"w":200,"h":30},
+{"type":"Question","x":6500,"y":60,"w":1500,"h":340,"c":0,"a":["4","6","10"],"q":"Each state can send up to ___ entries to the National Leadership Conference."},
+
+{"type":"Platform","x":8000,"y":370,"w":600,"h":30},
+{"type":"Platform","x":8200,"y":340,"w":400,"h":30},
+{"type":"Platform","x":8400,"y":310,"w":200,"h":30},
+{"type":"Question","x":8600,"y":60,"w":1400,"h":340,"c":2,"a":["Western","Southern","International"],"q":"Which of the following is NOT an FBLA region?"},
+
+
+{"type":"Ending","x":10100,"y":30,"w":100,"h":370},
+], 
+"color1": [255, 255, 255], 
+"color2": [255,0,100]
+}

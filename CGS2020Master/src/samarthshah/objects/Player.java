@@ -80,6 +80,11 @@ public class Player extends Rectangle2D.Double {
 	 * @param obstacles An arraylist with all of the obstacles that the player could have collided with
 	 */
 	public void act(ArrayList<Obstacle> obstacles) {		
+		
+		if (lives <= 0) {
+			reset();
+		}
+		
 		ay = 0.7;
 
 		vy += ay;
@@ -498,7 +503,7 @@ public class Player extends Rectangle2D.Double {
 		x = initialX;
 		y = initialY;
 		vy = 0;
-		ay = 0.7;
+		ay = 0.7/5*vx;
 		lives = 3;
 		world.resetWorld();
 	}
