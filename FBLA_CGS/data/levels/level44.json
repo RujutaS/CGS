@@ -1,0 +1,46 @@
+{"obstacles":
+[
+{"type":"Background","path":"backgrounds/background.jpg"},
+{"type":"Platform","x":0,"y":400,"w":10100,"h":30},
+{"type":"Platform","x":0,"y":30,"w":10100,"h":10},
+
+{"type":"Spike","x":430,"y":400,"l":30,"up":true},
+{"type":"Platform","x":460,"y":370,"w":140,"h":30},
+{"type":"Spike","x":510,"y":370,"l":30,"up":true},
+{"type":"Question","x":600,"y":60,"w":1400,"h":340,"c":1,"a":["7, 9","5, 9","6, 8"],"q":"Students in grades ___ to ___ can be a part of Middle Level"},
+
+{"type":"Platform","x":2000,"y":340,"w":100,"h":60},
+{"type":"Platform","x":2150,"y":340,"w":200,"h":30},
+{"type":"Platform","x":2400,"y":340,"w":100,"h":60},
+{"type":"Spike","x":2150,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2180,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2210,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2240,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2270,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2300,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2330,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2360,"y":400,"l":30,"up":true},
+{"type":"Question","x":2500,"y":60,"w":1500,"h":340,"c":0,"a":["Lead Speaker","Treasurer","Parliamentarian"],"q":"Which of the following is NOT a national officer position?"},
+
+{"type":"Platform","x":4000,"y":370,"w":300,"h":30},
+{"type":"Platform","x":4150,"y":340,"w":150,"h":30},
+{"type":"Spike","x":4350,"y":400,"l":30,"up":true},
+{"type":"Question","x":4500,"y":60,"w":1500,"h":340,"c":1,"a":["Yes","True","False"],"q":"True or False? New Competitive Events have been added since FBLA first started."},
+
+{"type":"Spike","x":6020,"y":400,"l":30,"up":true},
+{"type":"Platform","x":6050,"y":370,"w":30,"h":30},
+{"type":"Platform","x":6100,"y":60,"w":30,"h":250},
+{"type":"Spike","x":6100,"y":310,"l":30,"up":false},
+{"type":"Spike","x":6320,"y":400,"l":30,"up":true},
+{"type":"Question","x":6450,"y":60,"w":1550,"h":340,"c":2,"a":["Fall","Winter","Summer "],"q":"FBLA NLC traditionally takes place in the…"},
+
+{"type":"Platform","x":8000,"y":370,"w":200,"h":30},
+{"type":"Spike","x":8200,"y":400,"l":30,"up":true},
+{"type":"Platform","x":8300,"y":340,"w":200,"h":30},
+{"type":"Question","x":8600,"y":60,"w":1400,"h":340,"c":0,"a":["1937","1955","1907"],"q":"The concept of FBLA started in the year…"},
+
+{"type":"Ending","x":10100,"y":30,"w":100,"h":370},
+], 
+"color1": [0, 255, 255], 
+"color2": [0,0,0]
+}

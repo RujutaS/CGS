@@ -1,0 +1,33 @@
+{"obstacles":
+[
+{"type":"Background","path":"backgrounds/background.jpg"},
+{"type":"Platform","x":0,"y":400,"w":10100,"h":30},
+{"type":"Platform","x":0,"y":30,"w":10100,"h":10},
+
+{"type":"Spike","x":510,"y":400,"l":30,"up":true},
+{"type":"Question","x":600,"y":60,"w":1400,"h":340,"c":2,"a":["Future level","America level","Future and business levels"],"q":"In order to complete the leader level award, you must have also completed"},
+
+{"type":"Spike","x":2100,"y":400,"l":30,"up":true},
+{"type":"Spike","x":2250,"y":400,"l":30,"up":true},
+{"type":"Question","x":2450,"y":60,"w":1550,"h":340,"c":1,"a":["Preparing a budget for planning","The use of college level accounting textbooks","The use of spreadsheets or other accounting software"],"q":"BAA meets accounting standards for NSBE. Which of the following is NOT an aspect of this standard?"},
+
+{"type":"Spike","x":4120,"y":400,"l":30,"up":true},
+{"type":"Platform","x":4150,"y":370,"w":350,"h":30},
+{"type":"Question","x":4500,"y":60,"w":1500,"h":340,"c":2,"a":["â€œEducation is the first step in progressâ€�","â€œEducation should be accessible by everyoneâ€�","â€œI believe that education is the right of every personâ€�"],"q":" What is the first line of the FBLA-PBL creed?"},
+
+{"type":"Spike","x":6070,"y":400,"l":30,"up":true},
+{"type":"Platform","x":6100,"y":370,"w":300,"h":30},
+{"type":"Spike","x":6270,"y":370,"l":30,"up":true},
+{"type":"Question","x":6450,"y":60,"w":1550,"h":340,"c":0,"a":["3","10","20"],"q":"The minimum number of members needed to begin or reactivate a chapter is ___"},
+
+{"type":"Platform","x":8150,"y":370,"w":300,"h":30},
+{"type":"Spike","x":8120,"y":400,"l":30,"up":true},
+{"type":"Spike","x":8350,"y":370,"l":30,"up":true},
+{"type":"Question","x":8600,"y":60,"w":1400,"h":340,"c":0,"a":["November 15th","February 15th","October 20th"],"q":"American Enterprise Day isâ€¦"},
+
+
+{"type":"Ending","x":10100,"y":30,"w":100,"h":370},
+], 
+"color1": [255, 255, 255], 
+"color2": [0,0,0]
+}
