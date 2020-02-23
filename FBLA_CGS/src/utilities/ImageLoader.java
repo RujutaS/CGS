@@ -15,7 +15,7 @@ import processing.core.PImage;
  */
 public class ImageLoader {
 	
-	public static PImage mario, luigi, yoshi;
+	public static PImage mario, luigi, yoshi, logo;
 	public static PImage[] characters;
 	
 	/**
@@ -29,6 +29,8 @@ public class ImageLoader {
 		luigi.resize(1280, 720);	
 		yoshi = p.loadImage("yoshi.png");
 		yoshi.resize(1280, 720);
+		logo = p.loadImage("fbla.png");
+		logo.resize(1280, 720);
 		characters = new PImage[] {mario, luigi, yoshi};
 	}
 	
