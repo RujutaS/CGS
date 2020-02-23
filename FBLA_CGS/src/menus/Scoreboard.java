@@ -18,7 +18,13 @@ public class Scoreboard extends Menu {
 		this.addButton(new Button(540, 575, 200, 75, "Main Menu", Color.BLACK, Color.WHITE, Color.LIGHT_GRAY, Color.BLACK));
 	
 		highScores = new int[16];
-		
+			
+	}
+	
+	/**
+	 * Recollects the data that the scoreboard displays
+	 */
+	public void updateData() {
 		try {
 			parser = new JSONParser();
 

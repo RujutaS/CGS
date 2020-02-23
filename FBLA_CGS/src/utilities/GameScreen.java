@@ -56,6 +56,8 @@ public class GameScreen extends PApplet {
 		ImageLoader.loadAllImages(this);
 		Store s = (Store) store;
 		s.setup(this);
+		DifficultyMenu d = (DifficultyMenu) difficultyMenu;
+		d.updateButtons(this);
 	}
 
 	/**
@@ -156,8 +158,12 @@ public class GameScreen extends PApplet {
 		} else if (menumode.equals("difficulty")) {
 			currentMenu = difficultyMenu;
 		} else if (menumode.equals("store")) {
+			Store s = (Store) store;
+			s.setup(this);
 			currentMenu = store;
 		} else if (menumode.equals("scoreboard")) {
+			Scoreboard s = (Scoreboard) scoreboard;
+			s.updateData();
 			currentMenu = scoreboard;
 		} else if(menumode.equals("f")) {
 			lvlNum = 1;

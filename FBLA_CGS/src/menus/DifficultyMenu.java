@@ -52,7 +52,7 @@ public class DifficultyMenu extends Menu {
 		}
 	}
 	
-	private void updateButtons(PApplet papplet) {
+	public void updateButtons(PApplet papplet) {
 		GameScreen g = (GameScreen) papplet;
 		int diff = g.getLevel();
 		JSONObject json = papplet.loadJSONObject("data/levels.json");

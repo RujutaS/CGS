@@ -483,9 +483,9 @@ public class Player extends Rectangle2D.Double {
 	 * 
 	 */
 	public void jump() {
-//		if (onASurface || isRocket) {
+		if (onASurface || isRocket) {
 			vy = -10*(ay/0.7);
-//		}
+		}
 	}
 
 	/**
