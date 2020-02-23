@@ -15,7 +15,7 @@ public class Scoreboard extends Menu {
 	int[] highScores;
 
 	public Scoreboard() {
-		this.addButton(new Button(540, 525, 200, 75, "Main Menu", Color.BLACK, Color.WHITE, Color.LIGHT_GRAY, Color.BLACK));
+		this.addButton(new Button(540, 575, 200, 75, "Main Menu", Color.BLACK, Color.WHITE, Color.LIGHT_GRAY, Color.BLACK));
 	
 		highScores = new int[16];
 		
@@ -48,11 +48,21 @@ public class Scoreboard extends Menu {
 		drawer.textSize(40);
 		drawer.textAlign(PApplet.CENTER, PApplet.CENTER);
 		drawer.text("Scoreboard", 640, 50);
-		drawer.textSize(20);
-		for (int i = 0; i < 16; i++) {
-			drawer.text("" + highScores[i], 640, 100 + 20 * i);
+		
+		drawer.textSize(30);
+		drawer.text("Future", 640, 125);
+		drawer.text("Business", 640, 225);
+		drawer.text("Leader", 640, 325);
+		drawer.text("America", 640, 425);
+		
+		drawer.textSize(25);
+		
+		
+		for(int i = 1;i<=4;i++) {
+			for(int j = 1;j<=4;j++) {
+				drawer.text("Level "+j+": "+highScores[(j-1)*4+i-1], 265 + 250*(j-1), 175 + 100*(i-1));
+			}
 		}
-
 	}
 
 }

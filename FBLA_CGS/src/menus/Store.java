@@ -10,7 +10,7 @@ import utilities.ImageLoader;
 
 public class Store extends Menu {
 	
-	private final int cost = 10;
+	private final int cost = 100;
 	
 	private Button buy, select;
 	private int currentImage, selected;
@@ -39,7 +39,7 @@ public class Store extends Menu {
 	 * @return the image of the character that the user has selected
 	 */
 	public PImage getSelectedImage() {
-		return ImageLoader.characters[currentImage];
+		return ImageLoader.characters[selected];
 	}
 	
 	/**
@@ -116,7 +116,7 @@ public class Store extends Menu {
 			select.setFill(Color.WHITE);
 		}
 		
-		if(coins<10) {
+		if(coins<cost) {
 			buy.setFill(Color.RED);
 			buy.setHighlightFillColor(Color.RED);
 		} else {
