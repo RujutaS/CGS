@@ -158,6 +158,31 @@ public class Store extends Menu {
 			}
 		}
 		
+		drawer.textSize(18);
+		drawer.text("my characters:", 90, 30);
+		
+		drawer.fill(255);
+		drawer.rect(20, 55, 20, 20);
+		drawer.rect(20, 85, 20, 20);
+		drawer.rect(20, 115, 20, 20);
+		drawer.fill(0);
+		drawer.textSize(13);
+		drawer.text("Mario", 65, 60);
+		drawer.text("Luigi", 65, 90);
+		drawer.text("Yoshi", 65, 120);
+		
+		PImage check = drawer.loadImage("check.png");
+		check.resize(30, 0);
+		drawer.image(check, 25, 40);
+		
+		
+		if (bought[1]) {
+			drawer.image(check, 25, 70);
+		} 
+		if (bought[2]) {
+			drawer.image(check, 25, 100);
+		}
+		
 //		drawer.rect(300, 150, 680, 400);
 		drawer.image(ImageLoader.characters[currentImage], 300, 150, 680, 400);
 	}
