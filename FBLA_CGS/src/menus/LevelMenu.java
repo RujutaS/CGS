@@ -81,16 +81,16 @@ public class LevelMenu extends Menu {
 		String level;
 		GameScreen g = (GameScreen) drawer;
 		switch (g.getLevel()) {
-		case 0:
+		case 1:
 			level = "Future Level Select";
 			break;
-		case 1:
+		case 2:
 			level = "Business Level Select";
 			break;
-		case 2:
+		case 3:
 			level = "Leader Level Select";
 			break;
-		case 3:
+		case 4:
 			level = "America Level Select";
 			break;
 		default:
@@ -108,7 +108,6 @@ public class LevelMenu extends Menu {
 		drawer.rotate(drawer.frameCount / 69.0f);
 		star(drawer, 0, 0, 30, 70, 5);
 	
-		
 		drawer.popMatrix();
 	}
 

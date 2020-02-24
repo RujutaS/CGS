@@ -36,7 +36,7 @@ public class DifficultyMenu extends Menu {
 		this.addButton(b);
 		this.addButton(l);
 		this.addButton(a);
-		this.addButton(new Button(165, 550, 150, 50, "Back", Color.BLACK, Color.WHITE, Color.LIGHT_GRAY, Color.BLACK));
+		this.addButton(new Button(165, 550, 150, 50, "Main Menu", Color.BLACK, Color.WHITE, Color.LIGHT_GRAY, Color.BLACK));
 	}
 
 	public void doButtonAction(String buttonText, GameScreen gameScreen) {
@@ -48,7 +48,7 @@ public class DifficultyMenu extends Menu {
 			gameScreen.changeMenuMode("l");
 		} else if(buttonText.equals("America")&&unlocked[2]) {
 			gameScreen.changeMenuMode("a"); 
-		} else if(buttonText.equals("Back")) {
+		} else if(buttonText.equals("Main Menu")) {
 			gameScreen.changeMenuMode("main");
 		}
 	}
