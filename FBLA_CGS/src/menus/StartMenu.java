@@ -9,7 +9,7 @@ import utilities.ImageLoader;
 
 /**
  * 
- * @author Navaneet Kadaba
+ * @author Navaneet Kadaba & Rujuta Swadi
  * 
  * The StartMenu class is a specific type of Menu that
  * shows up before the user starts playing the game. It 
@@ -20,7 +20,7 @@ import utilities.ImageLoader;
  */
 public class StartMenu extends Menu {
 
-	private PImage logo;
+	
 
 	public StartMenu() {
 		super();
@@ -60,12 +60,9 @@ public class StartMenu extends Menu {
 		PImage hhs = drawer.loadImage("hhs.png");
 		PImage mario = drawer.loadImage("mario.png");
 		
-		
 		logo.resize(150, 0);
 		hhs.resize(150, 0);
 		mario.resize(150, 0);
-		
-		
 		
 		drawer.image(logo, 50, 30);
 		drawer.image(hhs, 120, 90);
@@ -78,11 +75,12 @@ public class StartMenu extends Menu {
 		drawer.textSize(18);
 		drawer.text("read the questions at the top", 640, 450);
 		drawer.text("jump* to the correct answer", 640, 480);
-		drawer.text("avoid spikes", 640, 510);
-		drawer.text("receive coins and increase your score for completeing levels", 640, 540);
-		drawer.text("buy new characters with coins", 640, 570);
+		drawer.text("jump* to avoid spikes", 640, 510);
+		drawer.text("receive coins & increase score by completeing levels", 640, 540);
+		drawer.text("lose a life for an incorrect answer", 640, 570);
+		drawer.text("buy new characters with coins", 640, 600);
 		drawer.textSize(25);
-		drawer.text("press PLAY to begin!", 640, 600);
+		drawer.text("press PLAY to begin!", 640, 630);
 
 
 	}

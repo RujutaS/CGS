@@ -132,8 +132,31 @@ public class Store extends Menu {
 		drawer.textAlign(PApplet.CENTER, PApplet.CENTER);
 		drawer.text("Store", 640, 50);
 		
-		drawer.textSize(20);
-		drawer.text("You have "+coins+" coins. Each character costs "+cost+" coins.", 640, 100);
+		//drawer.textSize(20);
+		//drawer.text("You have "+coins+" coins. Each character costs "+cost+" coins.", 640, 100);
+		
+		PImage coin = drawer.loadImage("coin.png");
+		coin.resize(100, 0);
+		drawer.image(coin, 1150, 30);
+		PImage money = drawer.loadImage("money.png");
+		money.resize(100, 0);
+		
+		
+		drawer.textSize(30);
+		drawer.text("" + coins, 1200, 50);
+		drawer.textSize(10);
+		drawer.text("my coins", 1200, 75);
+		
+		//if the character is not bought
+		if (!bought[currentImage]) {
+			drawer.image(money, 30, 590);
+			drawer.textSize(18);
+			drawer.text("cost: 100 coins", 210, 650);
+			if (coins < 100) {
+				drawer.textSize(12);
+				drawer.text("not enough coins", 210, 680);
+			}
+		}
 		
 //		drawer.rect(300, 150, 680, 400);
 		drawer.image(ImageLoader.characters[currentImage], 300, 150, 680, 400);

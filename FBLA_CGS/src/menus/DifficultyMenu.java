@@ -3,13 +3,14 @@ import java.awt.Color;
 import java.nio.FloatBuffer;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 import processing.data.JSONArray;
 import processing.data.JSONObject;
 import utilities.GameScreen;
 
 /**
  * 
- * @author Navaneet Kadaba
+ * @author Navaneet Kadaba & Rujuta Swadi
  * 
  * This Menu is displayed before the user can play the game
  * so that he or she can choose one of the three levels 
@@ -86,7 +87,35 @@ public class DifficultyMenu extends Menu {
 		drawer.textFont(drawer.createFont("Roboto", 20));
 		drawer.textSize(40);
 		drawer.textAlign(PApplet.CENTER, PApplet.CENTER);
-		drawer.text("Business Achievement Award Difficulty Select", 640, 100);
+		drawer.text("Select a Difficulty", 640, 100);
+		
+		PImage unlock = drawer.loadImage("unlocked.png");
+		PImage locked = drawer.loadImage("locked.png");
+		unlock.resize(100, 0);
+		locked.resize(110, 0);
+		drawer.image(unlock, 60, 230);
+		
+		if (unlocked[0]) {
+			drawer.image(unlock, 370, 330);
+		} else {
+			drawer.image(locked, 370, 330);
+		}
+		
+		if (unlocked[1]) {
+			drawer.image(unlock, 620, 430);
+		} else {
+			drawer.image(locked, 620, 430);
+		}
+		
+		if (unlocked[2]) {
+			drawer.image(unlock, 870, 530);
+		} else {
+			drawer.image(locked, 870, 530);
+		}
+		
+		PImage trophy = drawer.loadImage("trophy.png");
+		trophy.resize(100, 0);
+		drawer.image(trophy, 1130, 500);
 	}
 
 }
