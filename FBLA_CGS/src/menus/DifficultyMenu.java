@@ -18,10 +18,10 @@ import utilities.GameScreen;
  *
  */
 public class DifficultyMenu extends Menu {
-	
+
 	private Button f, b, l, a;
 	private boolean[] unlocked;
-	
+
 	public DifficultyMenu() {
 		f = new Button(165, 225, 200, 75, "Future", Color.BLACK, Color.PINK, Color.RED, Color.BLACK);
 		b = new Button(415, 325, 200, 75, "Business", Color.BLACK, Color.WHITE, Color.LIGHT_GRAY, Color.BLACK);
@@ -30,7 +30,7 @@ public class DifficultyMenu extends Menu {
 		doButtons();
 		unlocked = new boolean[3];
 	}
-	
+
 	private void doButtons() {
 		this.addButton(f);
 		this.addButton(b);
@@ -38,7 +38,7 @@ public class DifficultyMenu extends Menu {
 		this.addButton(a);
 		this.addButton(new Button(165, 550, 150, 50, "Back", Color.BLACK, Color.WHITE, Color.LIGHT_GRAY, Color.BLACK));
 	}
-	
+
 	public void doButtonAction(String buttonText, GameScreen gameScreen) {
 		if(buttonText.equals("Future")) {
 			gameScreen.changeMenuMode("f");
@@ -52,7 +52,7 @@ public class DifficultyMenu extends Menu {
 			gameScreen.changeMenuMode("main");
 		}
 	}
-	
+
 	public void updateButtons(PApplet papplet) {
 		GameScreen g = (GameScreen) papplet;
 		int diff = g.getLevel();
@@ -61,11 +61,11 @@ public class DifficultyMenu extends Menu {
 		JSONObject two = (JSONObject)levels.get(4);
 		JSONObject three = (JSONObject)levels.get(8);
 		JSONObject four = (JSONObject)levels.get(12);
-		
+
 		unlocked[0] = two.getBoolean("unlocked");
 		unlocked[1] = three.getBoolean("unlocked");
 		unlocked[2] = four.getBoolean("unlocked");
-		
+
 		if(!unlocked[0]) {
 			b.setFill(Color.LIGHT_GRAY);
 			b.setHighlightFillColor(Color.LIGHT_GRAY);
@@ -79,43 +79,55 @@ public class DifficultyMenu extends Menu {
 			a.setHighlightFillColor(Color.LIGHT_GRAY);
 		}
 	}
-	
+
 	public void draw(PApplet drawer) {
-//		drawer.background(ImageLoader.levelImage);
+		//		drawer.background(ImageLoader.levelImage);
 		updateButtons(drawer);
 		super.draw(drawer);
 		drawer.textFont(drawer.createFont("Roboto", 20));
 		drawer.textSize(40);
 		drawer.textAlign(PApplet.CENTER, PApplet.CENTER);
 		drawer.text("Select a Difficulty", 640, 100);
-		
+
 		PImage unlock = drawer.loadImage("unlocked.png");
 		PImage locked = drawer.loadImage("locked.png");
 		unlock.resize(100, 0);
 		locked.resize(110, 0);
 		drawer.image(unlock, 60, 230);
-		
+
 		if (unlocked[0]) {
 			drawer.image(unlock, 370, 330);
 		} else {
 			drawer.image(locked, 370, 330);
 		}
-		
+
 		if (unlocked[1]) {
 			drawer.image(unlock, 620, 430);
 		} else {
 			drawer.image(locked, 620, 430);
 		}
-		
+
 		if (unlocked[2]) {
 			drawer.image(unlock, 870, 530);
 		} else {
 			drawer.image(locked, 870, 530);
 		}
-		
+
 		PImage trophy = drawer.loadImage("trophy.png");
 		trophy.resize(100, 0);
 		drawer.image(trophy, 1130, 500);
+
+		PImage luigi = drawer.loadImage("luigi.png");
+		luigi.resize(80, 0);
+
+		if (unlocked [1]) {
+			drawer.image(luigi, 820, 320);
+		} else if (unlocked[0]) {
+			drawer.image(luigi, 570, 220);
+		} else {
+			drawer.image(luigi, 320, 120);
+		}
+
 	}
 
 }

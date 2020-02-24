@@ -98,11 +98,17 @@ public class LevelMenu extends Menu {
 		}
 		drawer.text(level, 640, 100);
 		
+		drawer.textSize(18);
+		drawer.text("press \"P\" at any time to pause the game!", 1100, 60);
+		drawer.text("use the up arrow to jump", 1160, 30);
+		
 		drawer.fill(255);
 		drawer.pushMatrix();
 		drawer.translate(starx, 250);
 		drawer.rotate(drawer.frameCount / 69.0f);
 		star(drawer, 0, 0, 30, 70, 5);
+	
+		
 		drawer.popMatrix();
 	}
 
