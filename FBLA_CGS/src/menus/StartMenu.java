@@ -54,7 +54,7 @@ public class StartMenu extends Menu {
 		drawer.textSize(50);
 		drawer.fill(Color.black.getRGB());
 		drawer.textAlign(PApplet.CENTER, PApplet.CENTER);
-		drawer.text("FBLA-Dash", 640, 100);
+		drawer.text("BAA Dash", 640, 100);
 
 		PImage logo = drawer.loadImage("fbla.png");
 		PImage hhs = drawer.loadImage("hhs.png");
